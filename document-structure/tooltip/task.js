@@ -10,6 +10,6 @@ phrase.addEventListener('click', function (e) {
      tooltip.style.top = this.style.top;
      tooltip.style.left = `${this.getBoundingClientRect().left}px`;
      tooltip.innerText = e.target.title;
-     tooltip.classList.add('tooltip_active');
+     tooltip.classList.toggle('tooltip_active');
      e.preventDefault();
 })
