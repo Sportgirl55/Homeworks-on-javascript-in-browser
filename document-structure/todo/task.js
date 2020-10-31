@@ -4,6 +4,7 @@ let input = document.getElementById('task__input');
 let button = document.getElementById('tasks__add');
 
 button.addEventListener('click', function (event) {
+     event.preventDefault();
      let task = document.createElement('div'); 
      if (input.value != '') {
           task.classList.add('task');
@@ -18,9 +19,6 @@ button.addEventListener('click', function (event) {
           taskRemove.addEventListener('click', (e) => 
                e.target.parentElement.remove()
           )
-          event.preventDefault();
-          input.value = '';
-     } else {
-          event.preventDefault();
-     }    
+          input.value = '';   
+     }
 })
